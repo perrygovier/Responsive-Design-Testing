@@ -53,18 +53,6 @@ $(document).ready(function(){
     return width;
   });
   
-  //add event handlers for options radio buttons
-  $('input[type=radio]').change(function(){
-    $frames = $('#frames');
-    $inputs = $('input[type=radio]:checked').val();
-    
-    if($inputs == '1'){
-      $frames.addClass('widthOnly');
-    } else {
-      $frames.removeClass('widthOnly');
-    }
-  });
-  
   //when the url textbox is used
   $('form').submit(function(){
     loadPage('' , $('#url input[type=text]').val());
